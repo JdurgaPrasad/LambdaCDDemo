@@ -1,10 +1,8 @@
-version: 0.1
-phases:
-  install:
-    commands:
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket pdomala-lambda-pipeline --output-template-file outputSamTemplate.yaml
-artifacts:
-  type: zip
-  files:
-    - samTemplate.yaml
-    - outputSamTemplate.yaml
+version: 0.2
+build:
+commands:
+- echo "Compressing the package.."
+- zip -r LambdaCode.zip ./LambdaCode
+- echo "Uploading to S3.."
+- aws s3 cp LambdaCode.zip s3://durga2021/myBuild.zip
+- echo "Done."

@@ -1,8 +1,5 @@
 version: 0.2
 build:
 commands:
-- echo "Compressing the package.."
-- zip -r LambdaCode.zip ./LambdaCode
-- echo "Uploading to S3.."
-- aws s3 cp LambdaCode.zip s3://durga2021/myBuild.zip
+- aws s3 cp LambdaCode s3://durga2021/myBuild.zip
 - echo "Do00ne."

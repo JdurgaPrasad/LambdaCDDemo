@@ -12,6 +12,8 @@ Resources:
         Ref: LambdaFuncName
       Handler: Lambda_api-lambda-db.lambda_handler
       Runtime: python3.6
+      Role: 
+        Fn::Sub: arn:aws:iam::549289340310:role/Lambdaroleforcfcf 
       Timeout: 900
 Parameters:
   LambdaFuncName:

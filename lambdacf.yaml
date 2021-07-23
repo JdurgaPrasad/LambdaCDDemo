@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+  LambdaFunction:
+    Type: 'AWS::Lambda::Function'
+    Properties:
+      Code:
+        S3Bucket:
+          Fn::Sub: "testtestbucket2021"
+        S3Key:
+          Fn::Sub: "LambdaCode.zip"
+      FunctionName:
+        Ref: LambdaFuncName
+      Handler: index.handler
+      Runtime: python3.6
+      Timeout: 900
+Parameters:
+  LambdaFuncName:
+    Type: String
+    Default: Lambda_api-lambda-db

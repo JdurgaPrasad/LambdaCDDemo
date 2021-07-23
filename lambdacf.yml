@@ -14,7 +14,7 @@ Resources:
               }
       FunctionName:
         Ref: LambdaFuncName
-      Handler: index.handler
+      Handler: Lambda_api-lambda-db.handler
       Runtime: python3.6
       Timeout: 900
       Role:

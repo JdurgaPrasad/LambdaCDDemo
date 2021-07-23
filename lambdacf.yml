@@ -18,7 +18,7 @@ Resources:
       Runtime: python3.6
       Timeout: 900
       Role:
-        Fn::Sub: arn:aws:iam::549289340310:role/MyLambdaRole
+        Fn::Sub: arn:aws:iam::549289340310:role/Lambdaroleforcf
 Parameters:
   LambdaFuncName:
     Type: String

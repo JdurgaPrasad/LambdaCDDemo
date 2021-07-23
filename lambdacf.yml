@@ -13,6 +13,8 @@ Resources:
       Handler: index.handler
       Runtime: python3.6
       Timeout: 900
+      Role:
+        Fn::Sub: arn:aws:iam::549289340310:role/MyLambdaRole
 Parameters:
   LambdaFuncName:
     Type: String

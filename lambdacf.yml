@@ -7,7 +7,7 @@ Resources:
         S3Bucket:
           Fn::Sub: "testtestbucket2021"
         S3Key:
-          Fn::Sub: "Lambda_api-lambda-db.py"
+          Fn::Sub: "Lambda_api-lambda-db"
       FunctionName:
         Ref: LambdaFuncName
       Handler: Lambda_api-lambda-db.lambda_handler

@@ -7,10 +7,10 @@ Resources:
         S3Bucket:
           Fn::Sub: "testtestbucket2021"
         S3Key:
-          Fn::Sub: "Lambda_api-lambda-db"
+          Fn::Sub: "welcome.zip"
       FunctionName:
         Ref: LambdaFuncName
-      Handler: Lambda_api-lambda-db.lambda_handler
+      Handler: welcome.hi
       Runtime: python3.6
       Role: 
         Fn::Sub: arn:aws:iam::549289340310:role/Lambdaroleforcfcf 
@@ -18,4 +18,4 @@ Resources:
 Parameters:
   LambdaFuncName:
     Type: String
-    Default: Lambda_api-lambda-db
+    Default: LambdaDemo
